@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #202124;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+
+    border-bottom: 1px solid #ddd;
+
+    background: white;
+
+    gap: 30px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+
+    min-width: 160px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    background: #f1f3f4;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    width: 450px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 15px;
+
+    width: 100%;
+}
+
+.theme-btn {
+    margin-left: auto;
+
+    border: none;
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* ================= LAYOUT ================= */
+
+.layout {
+    display: flex;
+
+    min-height: calc(100vh - 70px);
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 220px;
+
+    padding: 25px 15px;
+
+    border-right: 1px solid #ddd;
+
+    background: white;
+}
+
+.sidebar-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px 18px;
+
+    margin-bottom: 8px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: transparent;
+
+    font-size: 15px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    background: #f1f3f4;
+}
+
+.sidebar-item.active {
+    background: #e8f0fe;
+}
+
+
+/* ================= CONTENT ================= */
+
+.content {
+    flex: 1;
+
+    padding: 35px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.content h1 {
+    margin-bottom: 25px;
+}
+
+
+/* ================= ADD NOTE ================= */
+
+.add-note {
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.add-note input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.add-note textarea {
+    width: 100%;
+
+    min-height: 80px;
+
+    border: none;
+    outline: none;
+
+    resize: none;
+
+    font-size: 15px;
+}
+
+.add-note-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 15px;
+}
+
+.colors {
+    display: flex;
+
+    gap: 8px;
+}
+
+.color {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ccc;
+
+    cursor: pointer;
+}
+
+.yellow {
+    background: #fff475;
+}
+
+.blue {
+    background: #aecbfa;
+}
+
+.green {
+    background: #ccff90;
+}
+
+.pink {
+    background: #fdcfe8;
+}
+
+#addNoteBtn {
+    border: none;
+
+    background: #202124;
+
+    color: white;
+
+    padding: 9px 18px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+#addNoteBtn:hover {
+    opacity: 0.85;
+}
+
+
+/* ================= NOTES ================= */
+
+.notes-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 15px;
+
+        gap: 15px;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 65px;
+    }
+
+    .sidebar-item {
+        justify-content: center;
+
+        padding: 13px 5px;
+    }
+
+    .sidebar-item span {
+        display: none;
+    }
+
+    .content {
+        padding: 20px 15px;
+    }
+}
