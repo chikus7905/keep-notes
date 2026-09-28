@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KeepNotes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            📝 <span>KeepNotes</span>
+        </div>
+
+        <div class="search-box">
+            🔍
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search notes..."
+            >
+        </div>
+
+        <button class="theme-btn" id="themeBtn">
+            🌙
+        </button>
+
+    </header>
+
+
+    <!-- Main Layout -->
+    <main class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <button class="sidebar-item active">
+                📝
+                <span>Notes</span>
+            </button>
+
+            <button class="sidebar-item">
+                📌
+                <span>Pinned</span>
+            </button>
+
+            <button class="sidebar-item">
+                🗑️
+                <span>Trash</span>
+            </button>
+
+        </aside>
+
+
+        <!-- Content -->
+        <section class="content">
+
+            <h1>My Notes</h1>
+
+            <!-- Add Note -->
+            <div class="add-note">
+
+                <input
+                    type="text"
+                    id="titleInput"
+                    placeholder="Title"
+                >
+
+                <textarea
+                    id="contentInput"
+                    placeholder="Take a note..."
+                ></textarea>
+
+                <div class="add-note-footer">
+
+                    <div class="colors">
+                        <button class="color yellow"></button>
+                        <button class="color blue"></button>
+                        <button class="color green"></button>
+                        <button class="color pink"></button>
+                    </div>
+
+                    <button id="addNoteBtn">
+                        Add Note
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Notes -->
+            <div class="notes-container" id="notesContainer">
+
+                <!-- Notes will be created here using JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
